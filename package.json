@@ -1,0 +1,26 @@
+{
+	"name": "gudenaa",
+	"version": "1.0.0",
+	"description": "Cypress project to extract link",
+	"main": "index.js",
+	"scripts": {
+		"test": "npm test",
+		"test:spec": "cypress run --spec"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/NY-Daystar/Gudenaa.git"
+	},
+	"keywords": [
+		"cypress"
+	],
+	"author": "NY-Daystar",
+	"license": "GPL-3.0",
+	"bugs": {
+		"url": "https://github.com/NY-Daystar/Gudenaa/issues"
+	},
+	"homepage": "https://github.com/NY-Daystar/Gudenaa#readme",
+	"devDependencies": {
+		"cypress": "^13.6.2"
+	}
+}
