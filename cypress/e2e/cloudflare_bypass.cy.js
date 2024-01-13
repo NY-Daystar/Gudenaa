@@ -1,5 +1,7 @@
 describe("Accès à une page spécifique avec une liste de liens", () => {
 	it("Visite de la page et clic sur le premier lien", () => {
+		let url =
+			"https://dl-protect.link/d9175c27?fn=T25lIFBpZWNlIC0gU2Fpc29uIDEgRXBpc29kZSAxIC0gW1ZPU1RGUl0%3D&rl=b2";
 		let selector = ".container h3";
 		cy.visit(url, {
 			onBeforeLoad(win) {
@@ -18,14 +20,5 @@ describe("Accès à une page spécifique avec une liste de liens", () => {
 			.then(value => {
 				cy.log("Text: ", value);
 			});
-
-		// // Get and navigate to link in depth 2
-		// cy.get(selector)
-		// 	.first()
-		// 	.invoke("attr", "href")
-		// 	.then(url_depth => {
-		// 		cy.log("url_depth_2", url_depth);
-		// 		cy.visit(url_depth);
-		// 	});
 	});
 });

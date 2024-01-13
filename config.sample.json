@@ -1,0 +1,7 @@
+{
+	"url": "URL_TO_SCRAP",
+	"selector": "SELECTOR_CSS_TO_EXTRACT_LINKS",
+	"offset": 0,
+	"limit": "NUMBER_OF_ELEMENTS",
+	"datafile": "PATH_TO_FILE_WHERE_STORE_RESULT.csv"
+}
