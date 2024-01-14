@@ -1,42 +1,44 @@
-![GitHub watchers](https://img.shields.io/github/watchers/ny-daystar/gudenaa)
-![GitHub forks](https://img.shields.io/github/forks/ny-daystar/gudenaa)
-![GitHub Repo stars](https://img.shields.io/github/stars/ny-daystar/gudenaa)
-![GitHub repo size](https://img.shields.io/github/repo-size/ny-daystar/gudenaa)
-![GitHub language count](https://img.shields.io/github/languages/count/ny-daystar/gudenaa)
-![GitHub top language](https://img.shields.io/github/languages/top/ny-daystar/gudenaa) <a href="https://codeclimate.com/github/ny-daystar/gudenaa/maintainability"><img src="https://api.codeclimate.com/v1/badges/715c6f3ffb08de5ca621/maintainability" /></a>  
-![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/m/ny-daystar/gudenaa/main)
-![GitHub issues](https://img.shields.io/github/issues/ny-daystar/gudenaa)
-![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/ny-daystar/gudenaa)
-![GitHub](https://img.shields.io/github/license/ny-daystar/gudenaa)
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-blue.svg?style=circular)](#contributors)
-
-![Javascript](https://img.shields.io/badge/logo-javascript-blue?logo=javascript&color=a5a5a5&logoColor=e5e5e5)
-
 # Gudenaa
 
-Cypress project to automate some actions.
+![Javascript](https://img.shields.io/badge/-JavaScript-333333?style=flat&logo=javascript)  
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/7d168809cb204f1fa24909513265021b)](https://app.codacy.com/gh/NY-Daystar/Gudenaa/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade) [![Gudenaa-CI](https://github.com/NY-Daystar/Gudenaa/actions/workflows/dotnet.yml/badge.svg?branch=main)](https://github.com/NY-Daystar/Gudenaa/actions/workflows/dotnet.yml)
+![License](https://img.shields.io/github/license/ny-daystar/Gudenaa)
+[![Version](https://img.shields.io/github/tag/NY-Daystar/gudenaa.svg)](https://github.com/NY-Daystar/Gudenaa/releases)
+[![Total views](https://img.shields.io/sourcegraph/rrc/github.com/NY-Daystar/gudenaa.svg)](https://sourcegraph.com/github.com/NY-Daystar/gudenaa)
+
+![GitHub watchers](https://img.shields.io/github/watchers/ny-daystar/Gudenaa)
+![GitHub forks](https://img.shields.io/github/forks/ny-daystar/Gudenaa)
+![GitHub Repo stars](https://img.shields.io/github/stars/ny-daystar/Gudenaa)
+
+![GitHub repo size](https://img.shields.io/github/repo-size/ny-daystar/Gudenaa)
+![GitHub language count](https://img.shields.io/github/languages/count/ny-daystar/Gudenaa)
+![GitHub top language](https://img.shields.io/github/languages/top/ny-daystar/Gudenaa)
+![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/m/ny-daystar/Gudenaa/main)
+![GitHub issues](https://img.shields.io/github/issues/ny-daystar/Gudenaa)
+![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/ny-daystar/Gudenaa)
+
+Cypress project to automate some actions and first of all to grab links.
 
 Source code analysed with [DeepSource](https://deepsource.com/)
 
 ## Summary
 
--   [Requirements](#requirements)
--   [Get Started](#get-started)
--   [Debug](#debug)
-    -   [Use Cypress UI](#use-cypress-ui)
-    -   [Debug only one specification](#debug-only-one-specification)
--   [Configuration for get-links script](#configuration-for-get-links)
--   [For developpers](#for-developpers)
--   [Formatting](#formatting)
-    -   [Setup Eslint](#setup-eslint)
-    -   [Setup Prettier](#setup-prettier)
--   [Credits](#credits)
-
-##### Version: 1.0.0
+- [Requirements](#requirements)
+- [Get Started](#get-started)
+- [Debug](#debug)
+    - [Use Cypress UI](#use-cypress-ui)
+    - [Debug only one specification](#debug-only-one-specification)
+- [Configuration for get-links script](#configuration-for-get-links)
+- [For developpers](#for-developpers)
+- [Formatting](#formatting)
+    - [Setup Eslint](#setup-eslint)
+    - [Setup Prettier](#setup-prettier)
+- [Contact](#contact)
+- [Credits](#credits)
 
 ### Requirements
 
--   [NodeJS](http://nodejs.org) >= 20.3.1
+- [NodeJS](http://nodejs.org) >= 24.0.0
 
 ## Get Started
 
@@ -80,13 +82,10 @@ If you encounter problems you can debug the script like this :
 npm start
 ```
 
-2. open E2E (end-to-end) specs
-   ![End-To-End](./screens/screen1.png)
+2. open E2E (end-to-end) specs ![End-To-End](./screens/screen1.png)
 
-3. Select navigator among (Chrome, Edge, Firefox)
-   ![Navigator selection](./screens/screen2.png)
-4. Select the script you want to debug (ex: `get-links.cy.js`)
-   ![Script to debug](./screens/screen3.png)
+3. Select navigator among (Chrome, Edge, Firefox) ![Navigator selection](./screens/screen2.png)
+4. Select the script you want to debug (ex: `get-links.cy.js`) ![Script to debug](./screens/screen3.png)
 
 > Each change of the file will reload the cypress spec
 
@@ -110,21 +109,21 @@ This project needs several informations to be complete in `config.json` file
 
 Here's information needed:
 
--   `url`: The url to scrap data
--   `selector`: The selector css in the dom of `url` page to extract links
--   `limit` : number of elements `to fetch` with `selector`
--   `offset` : number of beggining elements `to skip` with `selector`
--   `filePath`: csv filepath (relative path) where store data (**DO NOT PUT ABSOLUTE PATH**)
+- `url`: The url to scrap data
+- `selector`: The selector css in the dom of `url` page to extract links
+- `limit` : number of elements `to fetch` with `selector`
+- `offset` : number of beggining elements `to skip` with `selector`
+- `filePath`: csv filepath (relative path) where store data (**DO NOT PUT ABSOLUTE PATH**)
 
 Exemple:
 
 ```json
 {
-    "url": "https://en.wikipedia.org/wiki/Peaky_Blinders_(TV_series)",
-    "selector": ".mw-content-ltr.mw-parser-output > ul > li > a",
-    "offset": "0",
-    "limit": "0",
-    "filePath": "results/peaky-blinder-characters.csv"
+	"url": "https://en.wikipedia.org/wiki/Peaky_Blinders_(TV_series)",
+	"selector": ".mw-content-ltr.mw-parser-output > ul > li > a",
+	"offset": "0",
+	"limit": "0",
+	"filePath": "results/peaky-blinder-characters.csv"
 }
 ```
 
@@ -134,16 +133,14 @@ If you want to contribute and add new scripts, you need to place it at `cypress/
 
 ## Formatting
 
-The source code is format with the `prettier`
-The source code is validate with `eslint`
+The source code is format with the `prettier` The source code is validate with `eslint`
 
 ### Setup EsLint
 
 1. Install module
 
 ```bash
-npm install --save-dev eslint
-npm i -D @stylistic/eslint-plugin-js
+npm install -D eslint @stylistic/eslint-plugin-js
 ```
 
 2. Init eslint and configure it
@@ -193,6 +190,12 @@ Then add rules in `package.json` file like this
     "tabWidth": 2
   },
 ```
+
+### Contact
+
+- To make a pull request: https://github.com/NY-Daystar/doppler/pulls
+- To summon an issue: https://github.com/NY-Daystar/doppler/issues
+- For any specific demand by mail: luc4snoga@gmail.com
 
 ## Credits
 

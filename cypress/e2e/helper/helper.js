@@ -6,8 +6,8 @@
  * @param {int} offset - number of elements to skip in the beginning
  * @returns new Cypress array
  */
-export const itemsFiltered = function ($items, limit, offset = 0) {
-    return limit === 0 ? $items : $items.slice(offset, limit)
+export function itemsFiltered($items, limit, offset = 0) {
+	return limit === 0 ? $items : $items.slice(offset, limit);
 }
 
 /**
@@ -17,11 +17,11 @@ export const itemsFiltered = function ($items, limit, offset = 0) {
  * @param {string} url - url to extract data
  * @returns only hostname with protocol
  */
-export const getHostname = function (url) {
-    // Regex to match group string before first '/'
-    const regex = /^(.*?:\/\/[^/]+\/)/
-    const match = url.match(regex)
-    return match[1] ?? null
+export function getHostname(url) {
+	// Regex to match group string before first '/'
+	const regex = /^(.*?:\/\/[^/]+\/)/;
+	const match = url.match(regex);
+	return match[1] ?? null;
 }
 
 /**
@@ -33,11 +33,11 @@ export const getHostname = function (url) {
  * @param {string} url - url to verify
  * @returns true if uri is valid false if it's relative
  */
-const isAbsoluteUri = function (url) {
-    // Regex to match group string before first '/'
-    const regex = /^(http|https)/
-    const match = url.match(regex)
-    return match !== null
+function isAbsoluteUri(url) {
+	// Regex to match group string before first '/'
+	const regex = /^(http|https)/;
+	const match = url.match(regex);
+	return match !== null;
 }
 
 /**
@@ -46,15 +46,15 @@ const isAbsoluteUri = function (url) {
  * @param {string} hostname - hostname to prefix on each link if it's not referenced (relative link)
  * @returns array standard with index, text and href tag attribute
  */
-export const csvArray = function ($items, hostname) {
-    const data = []
-    $items.each((index, item) => {
-        const text = Cypress.$(item).text()
-        let href = Cypress.$(item).attr("href")
-        if (!isAbsoluteUri(href)) href = `${hostname}/${href}`
-        data.push(`${index},${text},${href};`)
-    })
-    return data
+export function csvArray($items, hostname) {
+	const data = [];
+	$items.each((index, item) => {
+		const text = Cypress.$(item).text();
+		let href = Cypress.$(item).attr("href");
+		if (!isAbsoluteUri(href)) href = `${hostname}/${href}`;
+		data.push(`${index},${text},${href};`);
+	});
+	return data;
 }
 
 /**
@@ -63,6 +63,6 @@ export const csvArray = function ($items, hostname) {
  * @param {Array} data - data to insert in the csv
  * @returns true if file create false otherwise
  */
-export const writeCsv = function (path, data) {
-    return cy.writeFile(path, data)
+export function writeCsv(path, data) {
+	return cy.writeFile(path, data);
 }
