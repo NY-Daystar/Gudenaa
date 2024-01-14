@@ -20,7 +20,6 @@ describe("Get acces to web page which has a list of links", () => {
         cy.get(selector, { timeout: 10000 }).should("exist")
 
         const $selected = cy.get(selector)
-        document.querySelectorAll(".mw-content-ltr.mw-parser-output > ul > li")
         // Count elements who match selector
         cy.log(`document.querySelectorAll("${selector}).length`)
         $selected.then(($items) => {
