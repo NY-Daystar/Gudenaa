@@ -12,7 +12,7 @@ describe("Write configuration file", () => {
 
     it("Write csv file", () => {
         const filePath = `${folder}/array.csv`
-        let array = []
+        const array = []
         for (let i = 0; i < 5; i++) {
             array.push(`${i},Element ${i};`)
         }

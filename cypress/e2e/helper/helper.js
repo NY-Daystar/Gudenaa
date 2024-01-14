@@ -7,7 +7,7 @@
  * @returns new Cypress array
  */
 export const itemsFiltered = function ($items, limit, offset = 0) {
-    return limit == 0 ? $items : $items.slice(offset, limit)
+    return limit === 0 ? $items : $items.slice(offset, limit)
 }
 
 /**
@@ -27,9 +27,9 @@ export const getHostname = function (url) {
 /**
  * Verify is link is absolute or relative
  *  Ex: https://en.wikipedia.org/wiki/Peaky_Blinders_(TV_series)
- *  Will return : true
+ *  => Match is not null, it will return : true
  *  Ex2: /wiki/Peaky_Blinders_(TV_series)
- *  Will return false
+ *  => Match is null, it Will return false
  * @param {string} url - url to verify
  * @returns true if uri is valid false if it's relative
  */
@@ -37,8 +37,7 @@ const isAbsoluteUri = function (url) {
     // Regex to match group string before first '/'
     const regex = /^(http|https)/
     const match = url.match(regex)
-    if (match) return true
-    return false
+    return match !== null
 }
 
 /**
@@ -48,7 +47,7 @@ const isAbsoluteUri = function (url) {
  * @returns array standard with index, text and href tag attribute
  */
 export const csvArray = function ($items, hostname) {
-    let data = []
+    const data = []
     $items.each((index, item) => {
         const text = Cypress.$(item).text()
         let href = Cypress.$(item).attr("href")

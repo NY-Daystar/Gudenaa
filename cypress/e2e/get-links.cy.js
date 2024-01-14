@@ -12,7 +12,7 @@ describe("Get acces to web page which has a list of links", () => {
     it("Extract links", () => {
         const { url, selector, filePath } = config
         const limit =
-            config.limit == 0 || isNaN(config.limit) ? 0 : config.limit
+            config.limit === 0 || isNaN(config.limit) ? 0 : config.limit
         cy.log(`Url scrapped: ${url}`)
         cy.log(`Selector css: ${selector}`)
         cy.log(`Limit of elements to scrap: ${limit}`)
