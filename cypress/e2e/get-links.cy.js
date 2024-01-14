@@ -1,12 +1,7 @@
 /** File to extract list of links into a csv file */
 
 import config from "../../config.json"
-import {
-    itemsFiltered,
-    getHostname,
-    csvArray,
-    asyncWriteCsv,
-} from "./helper/helper"
+import { itemsFiltered, getHostname, csvArray, writeCsv } from "./helper/helper"
 
 describe("Get acces to web page which has a list of links", () => {
     it("Extract links", () => {
@@ -28,7 +23,7 @@ describe("Get acces to web page which has a list of links", () => {
         document.querySelectorAll(".mw-content-ltr.mw-parser-output > ul > li")
         // Count elements who match selector
         cy.log(`document.querySelectorAll("${selector}).length`)
-        $selected.then(async ($items) => {
+        $selected.then(($items) => {
             const count = Cypress.$($items).length
             cy.log(`Items list (${count}) : `, $items)
 
@@ -47,7 +42,7 @@ describe("Get acces to web page which has a list of links", () => {
 
             // Write in csv file
             cy.log(`Writing data in ${filePath}...`)
-            await asyncWriteCsv(filePath, csvContent)
+            writeCsv(filePath, csvContent)
             cy.log(`Data written in ${filePath}`)
 
             // TODO for v2

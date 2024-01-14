@@ -63,6 +63,6 @@ export const csvArray = function ($items, hostname) {
  * @param {Array} data - data to insert in the csv
  * @returns true if file create false otherwise
  */
-export const asyncWriteCsv = async function (path, data) {
-    return await cy.writeFile(path, data)
+export const writeCsv = function (path, data) {
+    return cy.writeFile(path, data)
 }
