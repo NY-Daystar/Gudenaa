@@ -1,26 +1,34 @@
 {
-	"name": "gudenaa",
-	"version": "1.0.0",
-	"description": "Cypress project to extract link",
-	"main": "index.js",
-	"scripts": {
-		"test": "npm test",
-		"test:spec": "cypress run --spec"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/NY-Daystar/Gudenaa.git"
-	},
-	"keywords": [
-		"cypress"
-	],
-	"author": "NY-Daystar",
-	"license": "GPL-3.0",
-	"bugs": {
-		"url": "https://github.com/NY-Daystar/Gudenaa/issues"
-	},
-	"homepage": "https://github.com/NY-Daystar/Gudenaa#readme",
-	"devDependencies": {
-		"cypress": "^13.6.2"
-	}
+    "name": "gudenaa",
+    "version": "1.0.0",
+    "description": "Cypress project to extract link",
+    "main": "index.js",
+    "scripts": {
+        "start": "npx cypress open",
+        "spec": "cypress run --spec 'cypress/e2e/$npm_config_file.cy.js'",
+        "spec:win": "cypress run --spec 'cypress/e2e/%npm_config_file%.cy.js'",
+        "get-links": "cypress run --spec 'cypress/e2e/get-links.cy.js'",
+        "lint": "eslint .",
+        "lint:fix": "npx eslint . --fix"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/NY-Daystar/Gudenaa.git"
+    },
+    "keywords": [
+        "cypress"
+    ],
+    "author": "NY-Daystar",
+    "license": "GPL-3.0",
+    "bugs": {
+        "url": "https://github.com/NY-Daystar/Gudenaa/issues"
+    },
+    "homepage": "https://github.com/NY-Daystar/Gudenaa#readme",
+    "devDependencies": {
+        "@stylistic/eslint-plugin-js": "^1.5.3",
+        "cypress": "^13.6.2",
+        "eslint": "^8.56.0",
+        "eslint-config-airbnb": "^19.0.4",
+        "prettier": "^3.2.1"
+    }
 }
