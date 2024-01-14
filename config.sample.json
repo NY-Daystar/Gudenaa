@@ -1,7 +1,7 @@
 {
-	"url": "URL_TO_SCRAP",
-	"selector": "SELECTOR_CSS_TO_EXTRACT_LINKS",
-	"offset": 0,
-	"limit": "NUMBER_OF_ELEMENTS",
-	"datafile": "PATH_TO_FILE_WHERE_STORE_RESULT.csv"
+    "url": "https://en.wikipedia.org/wiki/Peaky_Blinders_(TV_series)",
+    "selector": ".mw-content-ltr.mw-parser-output > ul > li > a",
+    "offset": "0",
+    "limit": "50",
+    "filePath": "results/peaky-blinder-characters.csv"
 }

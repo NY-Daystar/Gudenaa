@@ -1,0 +1,27 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "extends": ["eslint:recommended"], // based on airbnb convention
+    "plugins": ["@stylistic/eslint-plugin-js"],
+    "rules": {
+        "no-undef": ["off"],
+        "@stylistic/js/indent": ["error", 4], // Always indent of 4 spaces
+        "@stylistic/js/semi": [2, "never"], // Always add semicolon at each end line if not error
+        "@stylistic/js/quotes": ["error", "double"], // Always put double quotes instead of simple quotes
+        "@stylistic/js/multiline-ternary": ["error", "never"], // Accept ternary operations on multi-line
+        "@stylistic/js/space-before-function-paren": [
+            "error",
+            {
+                "anonymous": "always",
+                "named": "never",
+                "asyncArrow": "always"
+            }
+        ] // Handle space after function
+    }
+}

@@ -9,8 +9,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 # Unreleased
 
-## [v0.1.0] Init project
+## [v1.0.0] Init project
 
 > Add: Cypress configuration
 > Add: First cypress scripts
-> Add: Changelog + License
+> Add: README + CHANGELOG + LICENCE
