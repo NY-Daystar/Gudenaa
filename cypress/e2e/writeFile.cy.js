@@ -2,15 +2,15 @@
 
 import config from "../../config.json"
 
-describe("Write configuration file", async () => {
+describe("Write configuration file", () => {
     const folder = "results"
 
-    it("Write json file", async () => {
+    it("Write json file", () => {
         const filePath = `${folder}/default-config.json`
         cy.writeFile(filePath, config)
     })
 
-    it("Write csv file", async () => {
+    it("Write csv file", () => {
         const filePath = `${folder}/array.csv`
         let array = []
         for (let i = 0; i < 5; i++) {

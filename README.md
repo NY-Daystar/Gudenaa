@@ -4,19 +4,13 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/ny-daystar/gudenaa)
 ![GitHub language count](https://img.shields.io/github/languages/count/ny-daystar/gudenaa)
 ![GitHub top language](https://img.shields.io/github/languages/top/ny-daystar/gudenaa) <a href="https://codeclimate.com/github/ny-daystar/gudenaa/maintainability"><img src="https://api.codeclimate.com/v1/badges/715c6f3ffb08de5ca621/maintainability" /></a>  
-![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/m/ny-daystar/gudenaa/newArchitecture)
+![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/m/ny-daystar/gudenaa/main)
 ![GitHub issues](https://img.shields.io/github/issues/ny-daystar/gudenaa)
 ![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/ny-daystar/gudenaa)
 ![GitHub](https://img.shields.io/github/license/ny-daystar/gudenaa)
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-blue.svg?style=circular)](#contributors)
 
-![Android](https://img.shields.io/badge/Android-3DDC84?style=flat&logo=android&logoColor=white)
-![iOS](https://img.shields.io/badge/iOS-000000?style=flat&logo=ios&logoColor=white)
-![TypeScript](https://img.shields.io/badge/typescript-%23323330.svg?style=flat&logo=typescript&logoColor=%23F7DF1E)
-
-![React Native](https://img.shields.io/badge/react_native-%2320232a.svg?style=flat&logo=react&logoColor=%2361DAFB)
-![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=flat&logo=node.js&logoColor=white)
-![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=flat&logo=typescript&logoColor=white)
+![Javascript](https://img.shields.io/badge/logo-javascript-blue?logo=javascript&color=a5a5a5&logoColor=e5e5e5)
 
 # Gudenaa
 
