@@ -18,4 +18,3 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 - Cypress configuration
 - First cypress scripts
 - Get started
-- README + CHANGELOG + LICENCE

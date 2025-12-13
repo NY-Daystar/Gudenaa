@@ -9,36 +9,41 @@ import { FlatCompat } from "@eslint/eslintrc";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const compat = new FlatCompat({
-    baseDirectory: __dirname,
-    recommendedConfig: js.configs.recommended,
-    allConfig: js.configs.all,
+	baseDirectory: __dirname,
+	recommendedConfig: js.configs.recommended,
+	allConfig: js.configs.all,
 });
 
 export default defineConfig([
-    {
-        extends: compat.extends("eslint:recommended"),
+	{
+		extends: compat.extends("eslint:recommended"),
 
-        plugins: { "@stylistic/js": stylisticEslintPluginJs },
+		plugins: { "@stylistic/js": stylisticEslintPluginJs },
 
-        languageOptions: {
-            globals: { ...globals.browser },
+		languageOptions: {
+			globals: { ...globals.browser },
 
-            ecmaVersion: "latest",
-            sourceType: "module",
-        },
+			ecmaVersion: "latest",
+			sourceType: "module",
+		},
 
-        rules: {
-            "no-undef": ["off"],
-            "@stylistic/js/indent": ["error", 4],
-            "@stylistic/js/semi": [2, "always"],
-            "@stylistic/js/quotes": ["error", "double"],
-            "@stylistic/js/multiline-ternary": ["error", "never"],
-
-            "@stylistic/js/space-before-function-paren": [
-                "error",
-                { anonymous: "always", named: "never", asyncArrow: "always" },
-            ],
-        },
-    },
+		rules: {
+			indent: ["error", "tab", { SwitchCase: 1 }],
+			quotes: ["error", "double"],
+			semi: ["error", "always"],
+			"linebreak-style": ["error", "windows"],
+			"no-undef": "off",
+			"func-names": "warn",
+			"consistent-return": "off",
+			"no-console": "off",
+			"@stylistic/js/indent": ["error", "tab"],
+			"@stylistic/js/semi": [2, "always"],
+			"@stylistic/js/quotes": ["error", "double"],
+			"@stylistic/js/multiline-ternary": ["error", "never"],
+			"@stylistic/js/space-before-function-paren": [
+				"error",
+				{ anonymous: "always", named: "never", asyncArrow: "always" },
+			],
+		},
+	},
 ]);
-
