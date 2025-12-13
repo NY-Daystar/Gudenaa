@@ -1,7 +1,8 @@
 # Gudenaa
 
 ![Javascript](https://img.shields.io/badge/-JavaScript-333333?style=flat&logo=javascript)  
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/1cc626e0c7274395a2d920d26f2a5c4c)](https://app.codacy.com/gh/NY-Daystar/Gudenaa/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade) [!Gudenaa CI](https://github.com/NY-Daystar/Gudenaa/actions/workflows/js.yml/badge.svg?branch=main)](https://github.com/NY-Daystar/Gudenaa/actions)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/1cc626e0c7274395a2d920d26f2a5c4c)](https://app.codacy.com/gh/NY-Daystar/Gudenaa/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade) [![Gudenaa CI](https://github.com/NY-Daystar/Gudenaa/actions/workflows/js.yml/badge.svg?branch=main)](https://github.com/NY-Daystar/Gudenaa/actions)
+
 ![License](https://img.shields.io/github/license/ny-daystar/Gudenaa)
 [![Version](https://img.shields.io/github/tag/NY-Daystar/gudenaa.svg)](https://github.com/NY-Daystar/Gudenaa/releases)
 [![Total views](https://img.shields.io/sourcegraph/rrc/github.com/NY-Daystar/gudenaa.svg)](https://sourcegraph.com/github.com/NY-Daystar/gudenaa)
