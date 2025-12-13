@@ -1,7 +1,11 @@
 {
-    "url": "https://en.wikipedia.org/wiki/Peaky_Blinders_(TV_series)",
-    "selector": ".mw-content-ltr.mw-parser-output > ul > li > a",
-    "offset": "0",
-    "limit": "50",
-    "filePath": "results/peaky-blinder-characters.csv"
+	"url": "https://en.wikipedia.org/wiki/Peaky_Blinders_(TV_series)",
+	"selector": ".mw-content-ltr.mw-parser-output > ul > li > a",
+	"offset": "0",
+	"limit": "50",
+
+	"yt_api_key": "MY_API_KEY",
+	"playlist": "PLMhFZdf7RfEotiZ1e9lPb5LCDs-3jkZCD",
+
+	"filePath": "results/result.csv"
 }

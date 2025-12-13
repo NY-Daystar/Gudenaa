@@ -145,6 +145,7 @@ dist
 cypress/**/screenshots
 
 # End of https://www.toptal.com/developers/gitignore/api/node
-
+npm-audit.html
 results/
+configs/
 config.json
