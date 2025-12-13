@@ -1,3 +1,4 @@
+import fs from "fs";
 /**
  * Filter items list if needed
  * If no limit set we keep the original list
@@ -58,11 +59,16 @@ export function csvArray($items, hostname) {
 }
 
 /**
- * Write csv file into `path` with `data` content
+ * Write csv file with cypress into `path` with `data` content
  * @param {string} path - path of csv file relative to the project
  * @param {Array} data - data to insert in the csv
  * @returns true if file create false otherwise
  */
-export function writeCsv(path, data) {
+export function writeCyCsv(path, data) {
 	return cy.writeFile(path, data);
+}
+
+export function writeCsv(path, data) {
+	const csvContent = data.map((row) => row.join(",")).join("\n");
+	fs.writeFileSync(path, csvContent, "utf8");
 }

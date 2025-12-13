@@ -1,7 +1,7 @@
 /** File to extract list of links into a csv file */
 
 import config from "../../config.json";
-import { itemsFiltered, getHostname, csvArray, writeCsv } from "./helper/helper";
+import { itemsFiltered, getHostname, csvArray, writeCyCsv } from "./helper";
 
 describe("Get acces to web page which has a list of links", () => {
 	it("Extract links", () => {
@@ -40,18 +40,8 @@ describe("Get acces to web page which has a list of links", () => {
 
 			// Write in csv file
 			cy.log(`Writing data in ${filePath}...`);
-			writeCsv(filePath, csvContent);
+			writeCyCsv(filePath, csvContent);
 			cy.log(`Data written in ${filePath}`);
-
-			// TODO for v2
-			// Get and navigate to link in depth 2
-			// cy.get(selector)
-			// 	.first()cd
-			// 	.invoke("attr", "href")
-			// 	.then(url_depth => {
-			// 		cy.log("url_depth_2", url_depth);
-			// 		cy.visit(url_depth);
-			// 	});
 		});
 	});
 });

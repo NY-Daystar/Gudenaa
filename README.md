@@ -1,7 +1,7 @@
 # Gudenaa
 
 ![Javascript](https://img.shields.io/badge/-JavaScript-333333?style=flat&logo=javascript)  
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/7d168809cb204f1fa24909513265021b)](https://app.codacy.com/gh/NY-Daystar/Gudenaa/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade) [![Gudenaa-CI](https://github.com/NY-Daystar/Gudenaa/actions/workflows/dotnet.yml/badge.svg?branch=main)](https://github.com/NY-Daystar/Gudenaa/actions/workflows/dotnet.yml)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/1cc626e0c7274395a2d920d26f2a5c4c)](https://app.codacy.com/gh/NY-Daystar/Gudenaa/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade) [!Gudenaa CI](https://github.com/NY-Daystar/Gudenaa/actions/workflows/js.yml/badge.svg?branch=main)](https://github.com/NY-Daystar/Gudenaa/actions)
 ![License](https://img.shields.io/github/license/ny-daystar/Gudenaa)
 [![Version](https://img.shields.io/github/tag/NY-Daystar/gudenaa.svg)](https://github.com/NY-Daystar/Gudenaa/releases)
 [![Total views](https://img.shields.io/sourcegraph/rrc/github.com/NY-Daystar/gudenaa.svg)](https://sourcegraph.com/github.com/NY-Daystar/gudenaa)
@@ -17,7 +17,8 @@
 ![GitHub issues](https://img.shields.io/github/issues/ny-daystar/Gudenaa)
 ![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/ny-daystar/Gudenaa)
 
-Cypress project to automate some actions and first of all to grab links.
+Cypress project to automate some actions and first of all to grab links.  
+Also to get all of youtube links from a playlist
 
 Source code analysed with [DeepSource](https://deepsource.com/)
 
@@ -124,6 +125,25 @@ Exemple:
 	"offset": "0",
 	"limit": "0",
 	"filePath": "results/peaky-blinder-characters.csv"
+}
+```
+
+## Configuration for yt-playlist
+
+This project needs several informations to be complete in `config.json` file
+
+Here's information needed:
+
+- `yt_api_key`: api key store in google cloud SEE [this link](https://docs.cloud.google.com/docs/authentication/api-keys)
+- `playlist` : number of beggining elements `to skip` with `selector`
+- `filePath`: csv filepath (relative path) where store data (**DO NOT PUT ABSOLUTE PATH**)
+
+```json
+{
+	"yt_api_key": "YOUR_API_KEY",
+	"playlist": "PLMhFZdf7RfEotiZ1e9lPb5LCDs-3jkZCD",
+
+	"filePath": "results/yt-playlist.csv"
 }
 ```
 

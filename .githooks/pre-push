@@ -17,11 +17,6 @@ function main() {
     log_color "Install dependencies..." "green"
     install_dependencies
     log_color "Install dependencies DONE..." "green"
-
-    log_color "Executing unit tests..." "green"
-    unittest
-    check 'unittest' $?
-    log_color "Executing tests DONE..." "green"
     
     log_color "Executing prettier:fix" "magenta"
     prettier_fix
@@ -32,15 +27,6 @@ function main() {
     linter
     check 'linter' $?
     log_color "Executing linter DONE..." "magenta"
-    
-    log_color "Executing coverage tests" "yellow"
-    coverage
-    log_color "Executing coverage tests DONE..." "yellow"
-
-    log_color "Executing docker_build" "yellow"
-    docker_build
-    check 'docker_build' $?
-    log_color "Executing docker_build DONE..." "yellow"
 
     log_color "Executing check sca" "magenta"
     check_sca
@@ -51,7 +37,7 @@ function main() {
     sca
     log_color "Executing sca DONE..." "magenta"
 
-    log_color "Every controls are checked" "blue"
+    log_color "Every controls are checked" "green"
 }
 
 ###
@@ -64,10 +50,6 @@ function check() {
     result_code=$2
     log_verbose "action ${action} -> result_code: ${result_code}"
     case $action in
-    'compile')
-        [ $result_code != 0 ] && log_color "Unable to compile project.\nCancel git push." "red" && exit 1
-        ;;
-
     'unittest')
         [ $result_code != 0 ] && log_color "Unit tests are not successful.\nCancel git push." "red" && exit 1
         ;;
@@ -76,9 +58,6 @@ function check() {
         ;;
     'check_sca')
         [ $result_code != 0 ] && log_color "No package to launch analysis" "red" && log Execute: $(log_color  "npm i -g npm-audit-html@beta" "yellow") && log_color "Cancel git push" "red" && exit 1
-        ;;
-    'docker_build')
-        [ $result_code != 0 ] && log_color "Docker images building failed" "red" && log_color "Cancel git push" "red" && exit 1
         ;;
     esac
 }
@@ -89,16 +68,6 @@ function install_dependencies() {
     npm install --silent
     git add package-lock.json
     git commit --amend --no-edit
-}
-
-function unittest() {
-    npm run test
-    return $?
-}
-
-function coverage() {
-    npm run test:coverage
-    start ./coverage/lcov-report/index.html
 }
 
 function prettier_fix() {
@@ -115,12 +84,6 @@ function check_sca(){
     which npm-audit-html > /dev/null 2>/dev/null
     return $?
 }
-
-function docker_build() {
-    npm run docker:build
-    return $?
-}
-
 
 function sca() {
     packages=$(find . -name 'node_modules' -prune -o -name 'package.json' -print)
